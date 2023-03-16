@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-color: black;
+}
+
+.app h1 {
+  font-size: larger;
+  color: white;
+}
