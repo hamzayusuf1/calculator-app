@@ -2,6 +2,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: black;
 }
 
 .app {
@@ -9,6 +11,5 @@ body {
 }
 
 .app h1 {
-  font-size: larger;
   color: white;
 }
