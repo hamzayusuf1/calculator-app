@@ -1,10 +1,18 @@
 import "./App.css";
+import AnswerSection from "./components/AnswerSection";
+import CalcButtons from "./components/CalcButtons";
+import { CalcContextProvider } from "./context/CalcContext";
 
 function App() {
   return (
-    <div className="app">
-      <h1>Calculator time...</h1>
-    </div>
+    <CalcContextProvider>
+      <div className="calcApp">
+        <AnswerSection />
+        <div className="main-container">
+          <CalcButtons />
+        </div>
+      </div>
+    </CalcContextProvider>
   );
 }
 

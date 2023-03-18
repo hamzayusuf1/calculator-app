@@ -1,0 +1,34 @@
+.btns-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  column-gap: 5px;
+  row-gap: 15px;
+}
+
+.grid-item {
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+}
+
+.btns-grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-btn {
+  grid-column: 1 / span 2;
+}
+
+.eql-btn {
+  grid-column: 3 / span 2;
+}
+
+.btns-grid :not(.grid-item) {
+  border-radius: 12px;
+  height: 40px;
+}

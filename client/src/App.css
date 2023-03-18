@@ -3,13 +3,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: black;
+  background-color: #3a4663;
 }
 
-.app {
-  background-color: black;
-}
+.main-container {
+  width: 100%;
 
-.app h1 {
-  color: white;
+  border: black solid 2px;
+  background-color: #242d44;
+  padding: 10px;
 }
