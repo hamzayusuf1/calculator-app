@@ -58,13 +58,22 @@ const CalcButtons = () => {
   const { answer, setAnswer } = useCalcContext();
 
   const handleClick = (e) => {
+    console.log(typeof Number(e.target.name));
     setAnswer(answer.concat(e.target.name));
-    console.log(answer);
+    console.log(typeof answer);
+  };
+
+  const deleteNumber = () => {
+    setAnswer(answer.slice(0, -1));
+  };
+
+  const reset = () => {
+    setAnswer("");
   };
 
   return (
     <div class="btns-grid">
-      {btns.map((btn) => (
+      {/* {btns.map((btn) => (
         <button
           className="grid-item"
           key={btn}
@@ -73,24 +82,46 @@ const CalcButtons = () => {
         >
           {btn}
         </button>
-      ))}
-      {/* <button onClick={handleClick}>7</button>
-      <button onClick={handleClick}>8</button>
-      <button onClick={handleClick}>9</button>
-      <button onClick={handleClick}>Del</button>
-      <button onClick={handleClick}>4</button>
-      <button onClick={handleClick}>5</button>
-      <button onClick={handleClick}>6</button>
+      ))} */}
+      <button name="7" onClick={handleClick}>
+        7
+      </button>
+      <button name="8" onClick={handleClick}>
+        8
+      </button>
+      <button name="9" onClick={handleClick}>
+        9
+      </button>
+      <button name="DEL" onClick={deleteNumber}>
+        Del
+      </button>
+      <button name="4" onClick={handleClick}>
+        4
+      </button>
+      <button name="5" onClick={handleClick}>
+        5
+      </button>
+      <button name="6" onClick={handleClick}>
+        6
+      </button>
       <button>+</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
+      <button name="1" onClick={handleClick}>
+        1
+      </button>
+      <button name="2" onClick={handleClick}>
+        2
+      </button>
+      <button name="3" onClick={handleClick}>
+        3
+      </button>
       <button>-</button>
       <button>.</button>
       <button>0</button>
       <button>/</button>
-      <button>x</button> */}
-      <button className="reset-btn">RESET</button>
+      <button>x</button>
+      <button className="reset-btn" onClick={reset}>
+        RESET
+      </button>
       <button className="eql-btn">=</button>
     </div>
   );
