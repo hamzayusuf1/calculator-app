@@ -7,7 +7,7 @@ export const useCalcContext = () => {
 };
 
 export const CalcContextProvider = ({ children }) => {
-  const [answer, setAnswer] = useState(0);
+  const [answer, setAnswer] = useState("");
 
   return (
     <CalcContext.Provider value={{ answer, setAnswer }}>
