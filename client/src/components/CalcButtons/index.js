@@ -58,9 +58,8 @@ const CalcButtons = () => {
   const { answer, setAnswer } = useCalcContext();
 
   const handleClick = (e) => {
-    console.log(typeof Number(e.target.name));
     setAnswer(answer.concat(e.target.name));
-    console.log(typeof answer);
+    console.log(answer);
   };
 
   const deleteNumber = () => {
@@ -69,6 +68,11 @@ const CalcButtons = () => {
 
   const reset = () => {
     setAnswer("");
+  };
+
+  const calculate = () => {
+    setAnswer(eval(answer).toString());
+    console.log("hello");
   };
 
   return (
@@ -104,7 +108,9 @@ const CalcButtons = () => {
       <button name="6" onClick={handleClick}>
         6
       </button>
-      <button>+</button>
+      <button name="+" onClick={handleClick}>
+        +
+      </button>
       <button name="1" onClick={handleClick}>
         1
       </button>
@@ -114,15 +120,25 @@ const CalcButtons = () => {
       <button name="3" onClick={handleClick}>
         3
       </button>
-      <button>-</button>
-      <button>.</button>
-      <button>0</button>
-      <button>/</button>
-      <button>x</button>
+      <button name="-" onClick={handleClick}>
+        -
+      </button>
+      <button onClick={handleClick}>.</button>
+      <button name="0" onClick={handleClick}>
+        0
+      </button>
+      <button name="/" onClick={handleClick}>
+        /
+      </button>
+      <button name="*" onClick={handleClick}>
+        x
+      </button>
       <button className="reset-btn" onClick={reset}>
         RESET
       </button>
-      <button className="eql-btn">=</button>
+      <button className="eql-btn" onClick={calculate}>
+        =
+      </button>
     </div>
   );
 };

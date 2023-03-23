@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.btns-grid button {
+  /* font-style: ; */
+}
+
 .reset-btn {
   grid-column: 1 / span 2;
 }
