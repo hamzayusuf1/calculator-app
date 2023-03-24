@@ -16,8 +16,8 @@ const AnswerSection = () => {
       <div className="top">
         <h1 id="header">Calculator</h1>
         <div className="toggle">
-          <input onChange={handleChecked} type="checkbox" />
-          <label></label>
+          <input onChange={handleChecked} type="checkbox" id="darkmode" />
+          <label for="darkmode"></label>
         </div>
       </div>
       <div className="answer-field" style={{ height: "70px", width: "300px" }}>

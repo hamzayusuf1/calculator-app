@@ -24,7 +24,7 @@ label {
   height: 20px;
   display: block;
   position: relative;
-  background-color: #181f33;
+  background: var(--container-primary);
   border-radius: 20px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4);
   transition: 0.3s;
@@ -45,16 +45,16 @@ label::after {
 }
 
 input {
-  /* width: 0;
+  width: 0;
   height: 0;
-  opacity: 0; */
+  opacity: 0;
 }
 
 input:checked + label {
-  background-color: #e6e6e6;
+  background: #e6e6e6;
 }
 
-input:checked + label::after {
+input:checked + label:after {
   left: 49px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #c85402, #cf7c41);
