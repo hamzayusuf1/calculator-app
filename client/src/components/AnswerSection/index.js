@@ -4,11 +4,22 @@ import "./index.css";
 import { Textfit } from "react-textfit";
 
 const AnswerSection = () => {
-  const { answer, setAnswer } = useCalcContext();
+  const { answer, setAnswer, checked, setChecked } = useCalcContext();
+
+  const handleChecked = (e) => {
+    setChecked(e.target.checked);
+    console.log(checked);
+  };
 
   return (
     <div>
-      <h1>Calculator time...</h1>
+      <div className="top">
+        <h1 id="header">Calculator</h1>
+        <div className="toggle">
+          <input onChange={handleChecked} type="checkbox" />
+          <label></label>
+        </div>
+      </div>
       <div className="answer-field" style={{ height: "70px", width: "300px" }}>
         <Textfit
           mode="multi"

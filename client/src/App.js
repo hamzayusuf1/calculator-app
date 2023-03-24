@@ -1,18 +1,21 @@
 import "./App.css";
 import AnswerSection from "./components/AnswerSection";
 import CalcButtons from "./components/CalcButtons";
-import { CalcContextProvider } from "./context/CalcContext";
+import { CalcContextProvider, useCalcContext } from "./context/CalcContext";
 
 function App() {
+  const { checked } = useCalcContext();
   return (
-    <CalcContextProvider>
+    <div class="app" data-theme={checked}>
       <div className="calcApp">
-        <AnswerSection />
+        <div className="top-section">
+          <AnswerSection />
+        </div>
         <div className="main-container">
           <CalcButtons />
         </div>
       </div>
-    </CalcContextProvider>
+    </div>
   );
 }
 
